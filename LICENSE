@@ -1,21 +1,306 @@
-MIT License
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid & Celebration Luxury Greetings</title>
+    
+    <!-- Favicon uliyotaka -->
+    <link rel="icon" type="image/png" href="https://s10.aconvert.com/convert/p3r68-cdx67/a9zrf-d8ua8.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-Copyright (c) 2026 hatwhite097-97
+    <style>
+        :root {
+            --primary-gold: #d4af37;
+            --soft-gold: #f4e4bc;
+            --bg-cream: #fdfaf4;
+            --text-dark: #3e2723;
+            --glass: rgba(255, 255, 255, 0.95);
+        }
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: url('https://d.uguu.se/JVsKFZBD.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-dark);
+        }
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+        /* Music Floating Button */
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--glass);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 2px solid var(--primary-gold);
+        }
+        .music-control i { color: var(--primary-gold); font-size: 1.2rem; }
+        .music-control.playing i { animation: rotate 3s linear infinite; }
+
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .full-page {
+            min-height: 100vh;
+            background: rgba(253, 250, 244, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        nav { width: 100%; max-width: 1000px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--text-dark); font-weight: 700; text-decoration: none; }
+
+        .content-wrapper {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            width: 100%;
+            max-width: 600px;
+            border-radius: 50px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.5);
+            z-index: 10;
+        }
+
+        h1 { font-family: 'Amiri', serif; font-size: 3.5rem; color: var(--primary-gold); margin-bottom: 10px; line-height: 1.1; }
+        .input-group { margin-bottom: 25px; text-align: left; }
+        .input-group label { display: block; font-size: 0.75rem; font-weight: 600; color: var(--primary-gold); margin-left: 15px; margin-bottom: 8px; text-transform: uppercase; }
+        
+        input {
+            width: 100%; padding: 18px 25px; border-radius: 40px; border: none;
+            background: white; font-size: 1rem; outline: none; box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #b38728 100%);
+            color: white; padding: 20px; border-radius: 40px; border: none;
+            font-size: 1.1rem; font-weight: 600; cursor: pointer; width: 100%;
+            box-shadow: 0 15px 35px rgba(179, 135, 40, 0.3); margin-top: 10px;
+        }
+
+        #display-section { display: none; animation: fadeIn 0.8s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .message-content { background: rgba(255,255,255,0.6); padding: 25px; border-radius: 30px; margin-bottom: 25px; }
+        .arabic-text { font-family: 'Amiri', serif; font-size: 1.6rem; text-align: right; color: var(--text-dark); margin-bottom: 20px; }
+
+        .share-wa {
+            background: #25D366; color: white; text-decoration: none; padding: 20px;
+            border-radius: 40px; display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 700;
+        }
+
+        /* SEO Section */
+        .seo-section { max-width: 800px; margin-top: 60px; text-align: center; color: #5d4037; padding-bottom: 50px; }
+        .seo-section h2 { margin-bottom: 15px; color: var(--primary-gold); }
+
+        /* Footer */
+        footer {
+            background: var(--glass);
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 2px solid var(--primary-gold);
+        }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Hidden Pages Logic */
+        .page-content {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: white;
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 60px 10%;
+            text-align: left;
+        }
+        .page-content:target { display: block; }
+        .close-page {
+            position: fixed; top: 20px; right: 20px;
+            font-size: 2rem; color: var(--primary-gold); text-decoration: none;
+        }
+        .page-content h2 { color: var(--primary-gold); margin-bottom: 20px; font-family: 'Playfair Display', serif; font-size: 2.5rem; }
+        .page-content p { margin-bottom: 15px; line-height: 1.8; color: #444; }
+
+    </style>
+</head>
+<body onclick="playMusic()">
+
+    <audio id="eidAudio" loop>
+        <source src="https://s31.aconvert.com/convert/p3r68-cdx67/d71uz-ne474.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="music-control" id="musicToggle" onclick="toggleMusic(event)">
+        <i class="fas fa-music"></i>
+    </div>
+
+    <div class="full-page">
+        <nav>
+            <a href="#" class="logo">LUXURY GREETINGS</a>
+            <div style="font-size: 0.8rem; color: var(--primary-gold); font-weight: bold;">🔊 MUSIC ACTIVE</div>
+        </nav>
+
+        <div class="content-wrapper">
+            <div id="form-section">
+                <h1>Eid Mubarak</h1>
+                <p style="letter-spacing: 2px; color: #888; margin-bottom: 30px; font-weight: 600;">~ TUMA SALAMU ZA KISASA ~</p>
+
+                <div class="input-group">
+                    <label>Jina lako</label>
+                    <input type="text" id="sender" placeholder="Andika jina lako...">
+                </div>
+
+                <div class="input-group">
+                    <label>Jina la Rafiki</label>
+                    <input type="text" id="receiver" placeholder="Andika jina la rafiki...">
+                </div>
+
+                <button class="btn-gold" onclick="createBlessing()">Tengeneza Salamu ✨</button>
+            </div>
+
+            <div id="display-section">
+                <div id="typing" style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--primary-gold); margin-bottom: 25px;"></div>
+                <div class="message-content">
+                    <p class="arabic-text" id="ar-out"></p>
+                    <p style="font-size: 1rem; line-height: 1.8;" id="sw-out"></p>
+                </div>
+                <a href="#" id="waLink" class="share-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Tuma kwa WhatsApp
+                </a>
+                <button onclick="location.reload()" style="background:none; border:none; color:var(--primary-gold); margin-top:30px; cursor:pointer; text-decoration: underline;">⬅ Tengeneza nyingine</button>
+            </div>
+        </div>
+
+        <div class="seo-section">
+            <h2>Karibu kwenye Tovuti ya Salamu za Kifahari</h2>
+            <p>Hapa tunakupa nafasi ya kipekee ya kutengeneza kadi za kidijitali zenye muziki mwanana. Ingawa kwa sasa tunasherehekea Eid, tovuti hii ni rafiki wa sherehe zako zote mwaka mzima. Unaweza kuitumia kutuma salamu za furaha kwa marafiki na ndugu kwa urahisi zaidi kupitia WhatsApp.</p>
+            <p>Mwenyezi Mungu akujalie heri na baraka tele katika kila hatua unayopiga. Shiriki upendo leo kwa kutengeneza kadi yako.</p>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#faq">FAQ</a>
+                <a href="#rules">Rules & Terms</a>
+            </div>
+            <p style="font-size: 0.8rem; color: #888;">&copy; 2024 Luxury Greetings Portal. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Privacy Page -->
+    <div id="privacy" class="page-content">
+        <a href="#" class="close-page">&times;</a>
+        <h2>Privacy Policy</h2>
+        <p>Welcome to our Privacy Policy page. Your privacy is critically important to us. This website is designed to generate greeting links using URL parameters. We do not store any personal data, names, or messages on our servers. All information entered in the forms is processed locally on your browser and shared only through the link you generate.</p>
+        <p>We use third-party advertising services like Google AdSense to show ads. These companies may use cookies to show personalized ads based on your visits to this and other websites. By using this site, you agree to our use of these technical tools for a better experience.</p>
+        <p>Our commitment is to keep this platform safe, free, and private for all users worldwide. If you have questions about how we manage privacy, feel free to contact our technical team.</p>
+    </div>
+
+    <!-- FAQ Page -->
+    <div id="faq" class="page-content">
+        <a href="#" class="close-page">&times;</a>
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>1. Is this website only for Eid?</strong><br>No! While we are currently highlighting Eid Mubarak greetings, this platform is a permanent home for all celebrations. Once the Eid season passes, the website continues to be used for Happy Birthdays, Kitchen Parties, Weddings, and other religious or national holidays. You can always come back here to find the perfect wish for your loved ones.</p>
+        <p><strong>2. Does it cost money?</strong><br>No, our service is 100% free for everyone. We support the site through minimal advertisements to keep the servers running.</p>
+        <p><strong>3. Why is there music?</strong><br>We believe music adds a soul to your message. It makes the recipient feel the luxury and the emotion behind your wish.</p>
+        <p><strong>4. How do I share my greeting?</strong><br>Simply enter your name and the recipient's name, click "Tengeneza", and then click the green WhatsApp button to send it instantly.</p>
+    </div>
+
+    <!-- Rules Page -->
+    <div id="rules" class="page-content">
+        <a href="#" class="close-page">&times;</a>
+        <h2>Rules & Terms of Service</h2>
+        <p>By accessing this website, you agree to comply with our community standards. This platform is built to spread love, joy, and peace. Users are strictly prohibited from using the form to generate offensive, harmful, or insulting messages.</p>
+        <p>We reserve the right to block access to users who misuse the platform for spam or harassment. The content generated on this site is for personal, non-commercial use. We are not responsible for the content shared between individuals, but we encourage everyone to use this luxury tool with respect and dignity.</p>
+        <p>All assets, including the music and design, are property of the Luxury Greetings Portal or used under licensed permissions. Unauthorized copying of this website's source code is prohibited.</p>
+    </div>
+
+    <script>
+        const audio = document.getElementById('eidAudio');
+        const musicBtn = document.getElementById('musicToggle');
+        let hasPlayed = false;
+
+        function playMusic() {
+            if (!hasPlayed) {
+                audio.play();
+                musicBtn.classList.add('playing');
+                hasPlayed = true;
+            }
+        }
+
+        function toggleMusic(event) {
+            event.stopPropagation();
+            if (audio.paused) {
+                audio.play();
+                musicBtn.classList.add('playing');
+            } else {
+                audio.pause();
+                musicBtn.classList.remove('playing');
+            }
+        }
+
+        function createBlessing() {
+            const s = document.getElementById('sender').value;
+            const r = document.getElementById('receiver').value;
+            if(!s || !r) { alert("Tafadhali jaza majina!"); return; }
+
+            playMusic();
+            document.getElementById('form-section').style.display = 'none';
+            document.getElementById('display-section').style.display = 'block';
+
+            const ar = `إلى ${r}، عيد مبارك وكل عام وأنتم بخير. من ${s}`;
+            const sw = `Kwa rafiki yangu ${r}, katika siku hii ya kheri, ${s} anakutakia maisha yenye baraka tere, afya imara na mafanikio tele. Eid Mubarak!`;
+
+            document.getElementById('ar-out').innerText = ar;
+            document.getElementById('sw-out').innerText = sw;
+
+            let i = 0;
+            const txt = `${s} amekutumia zawadi...`;
+            function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("typing").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            typeWriter();
+
+            const currentUrl = window.location.href.split('?')[0].split('#')[0];
+            const waText = `*${s}* amekutumia salamu ya *Eid Mubarak* yenye muziki! 🌙✨\nFungua hapa uisome:\n${currentUrl}?f=${encodeURIComponent(s)}&t=${encodeURIComponent(r)}`;
+            document.getElementById('waLink').href = `https://wa.me/?text=${encodeURIComponent(waText)}`;
+        }
+
+        window.onload = function() {
+            const p = new URLSearchParams(window.location.search);
+            if(p.get('f') && p.get('t')) {
+                document.getElementById('sender').value = p.get('f');
+                document.getElementById('receiver').value = p.get('t');
+                createBlessing();
+            }
+        }
+    </script>
+</body>
+</html>
